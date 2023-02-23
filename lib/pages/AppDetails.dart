@@ -1,25 +1,13 @@
 import 'package:flutter/material.dart';
 import '../widget/ButtomNavigationMenu.dart';
-import 'package:restaurant_menu/widget/DrawerMenu.dart';
 
-import 'Home.dart';
-
-class HomePage extends StatelessWidget {
-  const HomePage({super.key, required this.title});
-
-  final String title;
-
+class AppDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: GestureDetector(
-          child: Icon(Icons.arrow_back_sharp),
-          onTap: () {
-            //TODO previous page
-          },
-        ),
-        title: const Text('HOME'),
+        title: const Text(''),
+        backgroundColor: Color.fromARGB(255, 255, 255, 255),
         shadowColor: Colors.white,
         automaticallyImplyLeading: false,
         actions: [
@@ -33,7 +21,9 @@ class HomePage extends StatelessWidget {
       // appBar: AppBar(
       //   title: Text(title),
       //   backgroundColor: Color.fromARGB(255, 201, 143, 73),),
-      body: const Home(),
+      body: Container(
+        child: Text("Page 2"),
+      ),
       // drawer: DrawerMenu(),
       bottomNavigationBar: const ButtomNavigationMenu(),
     );
