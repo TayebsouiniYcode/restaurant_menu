@@ -16,12 +16,43 @@ class Suggestion extends StatelessWidget {
               Row(mainAxisAlignment: MainAxisAlignment.start, children: const [
             Text(
               "Suggestion for you",
-              style: TextStyle(fontSize: 18),
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
           ]),
         ),
-        Row(
-          children: const [DashCard()],
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          padding: const EdgeInsets.all(12),
+          child: Row(
+            // children: const [DashCard()],
+            children: [
+              DashCard(
+                  title: "Burger",
+                  description: "Taste our Hot Burger",
+                  image: "burger.png",
+                  price: "10"),
+              DashCard(
+                  title: "Burger",
+                  description: "Taste our Hot Burger",
+                  image: "dash1.jpg",
+                  price: "10"),
+              DashCard(
+                  title: "Burger",
+                  description: "Taste our Hot Burger",
+                  image: "dash2.jpg",
+                  price: "10"),
+              DashCard(
+                  title: "Burger",
+                  description: "Taste our Hot Burger",
+                  image: "dash3.jpg",
+                  price: "10"),
+              DashCard(
+                  title: "Burger",
+                  description: "Taste our Hot Burger",
+                  image: "burger.png",
+                  price: "10")
+            ],
+          ),
         ),
       ]),
     );
