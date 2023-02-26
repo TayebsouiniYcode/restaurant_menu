@@ -16,7 +16,7 @@ class Home extends StatelessWidget {
             Categories(),
             PopularDash(),
             Suggestion(),
-            TopRated()
+            TopRated(),
           ],
         ));
   }

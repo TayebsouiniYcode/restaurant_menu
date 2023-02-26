@@ -12,20 +12,32 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: false,
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
         leading: GestureDetector(
-          child: Icon(Icons.arrow_back_sharp),
+          child: const Icon(
+            Icons.arrow_back_sharp,
+            color: Colors.black,
+          ),
           onTap: () {
             //TODO previous page
           },
         ),
-        title: const Text('HOME'),
-        shadowColor: Colors.white,
+        title: const Text(
+          'HOME',
+          style: TextStyle(color: Colors.black),
+        ),
+        shadowColor: Colors.black,
         automaticallyImplyLeading: false,
         actions: [
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.search),
+            icon: const Icon(
+              Icons.search,
+              color: Colors.black,
+            ),
           )
         ],
         centerTitle: true,
@@ -33,8 +45,8 @@ class HomePage extends StatelessWidget {
       // appBar: AppBar(
       //   title: Text(title),
       //   backgroundColor: Color.fromARGB(255, 201, 143, 73),),
-      body: const Home(),
-      // drawer: DrawerMenu(),
+      body: const SingleChildScrollView(child: Home()),
+      drawer: DrawerMenu(),
       bottomNavigationBar: const ButtomNavigationMenu(),
     );
   }
