@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../widget/ButtomNavigationMenu.dart';
-import 'package:restaurant_menu/widget/DrawerMenu.dart';
 
 import 'Home.dart';
 
@@ -46,7 +45,7 @@ class HomePage extends StatelessWidget {
       //   title: Text(title),
       //   backgroundColor: Color.fromARGB(255, 201, 143, 73),),
       body: const SingleChildScrollView(child: Home()),
-      drawer: DrawerMenu(),
+      // drawer: DrawerMenu(),
       bottomNavigationBar: const ButtomNavigationMenu(),
     );
   }

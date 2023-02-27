@@ -1,5 +1,7 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:restaurant_menu/pages/AppDetails.dart';
+import 'package:restaurant_menu/pages/DashDetails.dart';
 
 class TopRated extends StatelessWidget {
   const TopRated({super.key});
@@ -9,7 +11,7 @@ class TopRated extends StatelessWidget {
     return Column(
       children: [
         Row(
-          children: [
+          children: const [
             Text(
               "Top Rated",
               style: TextStyle(
@@ -23,28 +25,242 @@ class TopRated extends StatelessWidget {
             height: 600,
             child: ListView(
               children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("1"),
-                    Text("2"),
-                    Text("3"),
-                  ],
+                Card(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(5),
+                        width: MediaQuery.of(context).size.width * 0.20,
+                        height: 60.0,
+                        child: const Image(
+                          image: AssetImage("images/burger.png"),
+                          width: double.infinity,
+                        ),
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.65,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Padding(
+                              padding: EdgeInsets.all(5),
+                              child: Text(
+                                "Burger",
+                                style: TextStyle(
+                                    fontSize: 17.00,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.all(5),
+                              child: Text("Description in this line"),
+                            ),
+                            Padding(
+                                padding: EdgeInsets.all(5),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    const Text(
+                                      "\$30",
+                                      style: TextStyle(color: Colors.red),
+                                    ),
+                                    TextButton(
+                                        onPressed: () {
+                                          //TODO
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    // DashDetails(
+                                                    //   index: 1,
+                                                    // )),
+                                                    AppDetails()),
+                                          );
+                                        },
+                                        child: const Icon(
+                                          Icons.add_shopping_cart_sharp,
+                                          color: Colors.amber,
+                                        )),
+                                  ],
+                                ))
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-                Container(
-                  height: 50,
-                  color: Colors.amber[600],
-                  child: const Center(child: Text('Entry A')),
+                Card(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(5),
+                        width: MediaQuery.of(context).size.width * 0.20,
+                        height: 60.0,
+                        child: const Image(
+                          image: AssetImage("images/burger.png"),
+                          width: double.infinity,
+                        ),
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.65,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Padding(
+                              padding: EdgeInsets.all(5),
+                              child: Text(
+                                "Burger",
+                                style: TextStyle(
+                                    fontSize: 17.00,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.all(5),
+                              child: Text("Description in this line"),
+                            ),
+                            Padding(
+                                padding: EdgeInsets.all(5),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    const Text(
+                                      "\$30",
+                                      style: TextStyle(color: Colors.red),
+                                    ),
+                                    TextButton(
+                                        onPressed: () {
+                                          //TODO
+                                        },
+                                        child: const Icon(
+                                          Icons.add_shopping_cart_sharp,
+                                          color: Colors.amber,
+                                        )),
+                                  ],
+                                ))
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-                Container(
-                  height: 50,
-                  color: Colors.amber[500],
-                  child: const Center(child: Text('Entry B')),
+                Card(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(5),
+                        width: MediaQuery.of(context).size.width * 0.20,
+                        height: 60.0,
+                        child: const Image(
+                          image: AssetImage("images/burger.png"),
+                          width: double.infinity,
+                        ),
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.65,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Padding(
+                              padding: EdgeInsets.all(5),
+                              child: Text(
+                                "Burger",
+                                style: TextStyle(
+                                    fontSize: 17.00,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.all(5),
+                              child: Text("Description in this line"),
+                            ),
+                            Padding(
+                                padding: EdgeInsets.all(5),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    const Text(
+                                      "\$30",
+                                      style: TextStyle(color: Colors.red),
+                                    ),
+                                    TextButton(
+                                        onPressed: () {
+                                          //TODO
+                                        },
+                                        child: const Icon(
+                                          Icons.add_shopping_cart_sharp,
+                                          color: Colors.amber,
+                                        )),
+                                  ],
+                                ))
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-                Container(
-                  height: 50,
-                  color: Colors.amber[100],
-                  child: const Center(child: Text('Entry C')),
+                Card(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(5),
+                        width: MediaQuery.of(context).size.width * 0.20,
+                        height: 60.0,
+                        child: const Image(
+                          image: AssetImage("images/burger.png"),
+                          width: double.infinity,
+                        ),
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.65,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Padding(
+                              padding: EdgeInsets.all(5),
+                              child: Text(
+                                "Burger",
+                                style: TextStyle(
+                                    fontSize: 17.00,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.all(5),
+                              child: Text("Description in this line"),
+                            ),
+                            Padding(
+                                padding: EdgeInsets.all(5),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    const Text(
+                                      "\$30",
+                                      style: TextStyle(color: Colors.red),
+                                    ),
+                                    TextButton(
+                                        onPressed: () {
+                                          //TODO
+                                        },
+                                        child: const Icon(
+                                          Icons.add_shopping_cart_sharp,
+                                          color: Colors.amber,
+                                        )),
+                                  ],
+                                ))
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             )),
@@ -61,7 +277,6 @@ class TopRated extends StatelessWidget {
     // );
   }
 }
-
 
 // SizedBox(
 //             height: 600,
