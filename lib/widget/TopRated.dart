@@ -73,10 +73,10 @@ class TopRated extends StatelessWidget {
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) =>
-                                                    // DashDetails(
-                                                    //   index: 1,
-                                                    // )),
-                                                    AppDetails()),
+                                                    DashDetails(
+                                                      index: 1,
+                                                    )),
+                                            // AppDetails()),
                                           );
                                         },
                                         child: const Icon(

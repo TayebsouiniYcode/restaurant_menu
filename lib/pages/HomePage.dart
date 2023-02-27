@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
       // appBar: AppBar(
       //   title: Text(title),
       //   backgroundColor: Color.fromARGB(255, 201, 143, 73),),
-      body: const SingleChildScrollView(child: Home()),
+      body: Home(),
       // drawer: DrawerMenu(),
       bottomNavigationBar: const ButtomNavigationMenu(),
     );
